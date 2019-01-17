@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Post = ({ id, body, title}) => {
+const Post = ({ id, body, title }) => {
     return (
         <React.Fragment>
             <section id={ id }>

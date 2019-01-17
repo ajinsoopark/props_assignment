@@ -1,32 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Times New Roman', Times, serif;
+
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  font-size: 42px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-size: 31px;
+  width: 700px;
 }
+
+label {
+  font-size: 20px;
+}
+
+input {
+  font-size: 20px;
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+  cursor: text;
+  border-radius: 0;
+  margin: 5px;
+  -webkit-appearance: none;
+}
+
+label, input {
+  transition: all 0.4s;
+  touch-action: manipulation;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+.createPost {
+  font-size: 25px;
+}
+
+small {
+  color: red;
+}
+
+.inputBody {
+  height: 150px;
+  width: 300px;
+}
+
+.submitButton {
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid #03a87c;
+  cursor: pointer;
+  color: #03a87c;
+  border-radius: 4px;
+}
+
+.submitButton:hover {
+  color:#C1E2D8;
+}
+
+.submitButton:focus {
+  outline: 0;
+  border-bottom: 1px solid #03a87c;
+}
+
+.form {
+  border: 1px solid black;
+  border-left: white;
+  border-right: white;
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-style: 10px inset #d2e3ed;
+  width: 700px;
+}
+
